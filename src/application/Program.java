@@ -21,7 +21,8 @@ public class Program {
 		
 		ProductService ps = new ProductService();
 		
-		double sum = ps.filteredSum(list);
+		double sum = ps.filteredSum(list, p -> p.getName().charAt(0) == 'T'); // A função fica flexível pois posso passar a lista e a condição que quero usar para filtrar
+		//Exemplos de condições: p -> p.getPrice() > 100.0;
 		
 		System.out.println("Sum = " + String.format("%.2f", sum));
 		
